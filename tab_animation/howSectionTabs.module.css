@@ -1,0 +1,101 @@
+.howSectionTabList {
+  gap: 2.5rem;
+  padding-bottom: 1.125rem;
+  position: relative;
+  max-width: 886px;
+  width: 100%;
+  margin-bottom: 5.375rem;
+}
+
+.howSectionTab {
+  gap: 6px;
+  cursor: pointer;
+}
+
+.howSectionTab.active svg path {
+  fill: #09001D;
+}
+
+.howSectionTabText {
+  color: #828696;
+  font-weight: 700;
+  margin-bottom: 0px;
+}
+
+.howSectionTab.active .howSectionTabText {
+  color: #09001D;
+}
+
+.howSectionTabLine {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0px;
+  height: 3px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #86C5FF 0%, #5480FF 100%);
+  transition: all 0.2s ease-in-out;
+}
+
+.howSectionCardList {
+  max-width: 990px;
+  width: 100%;
+}
+
+.howSectionCard {
+  gap: 1.875rem;
+}
+
+.howSectionCardLeft, .howSectionCardRight {
+  width: 50%;
+}
+
+.howSectionCardTitle, .howSectionCardHeading, .howSectionCardDesc {
+  transform: translateY(10px);
+  opacity: 0;
+}
+
+.howSectionCardTitle {
+  color: #1375FF;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  animation: showUp 0.4s ease-in-out forwards;
+}
+
+@keyframes showUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.howSectionCardHeading {
+  color: #09001D;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-bottom: 4px;
+  animation: showUp 0.4s ease-in-out 0.1s forwards;
+}
+
+.howSectionCardDesc {
+  color: #3B3A76;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  margin-bottom: 0px;
+  animation: showUp 0.4s ease-in-out 0.2s forwards;
+}
+
+.howSectionCardImg {
+  width: 100%;
+  animation: showUp 0.4s ease-in-out forwards;
+}
+
+.howSectionCardMobileImg {
+  display: none;
+}
