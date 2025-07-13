@@ -1,0 +1,150 @@
+.stepsSectionBoxStepsLeft {
+  width: 40%;
+  padding: 1rem 0px 1.625rem;
+}
+
+.stepsSectionBoxStepsList {
+  gap: 3rem;
+  position: relative;
+  z-index: 0;
+}
+
+.stepsSectionBoxStepLine {
+  position: absolute;
+  width: 1px;
+  border-right: 1px dashed #b5b2bd;
+  left: 2rem;
+  z-index: -1;
+}
+
+.stepsSectionBoxStepAniLine {
+  width: 2px;
+  margin-left: -0.5px;
+  background-color: #1278fe;
+  border-radius: 2px;
+}
+
+.animatedLine {
+  animation: moveDown 4s linear forwards;
+}
+
+@keyframes moveDown {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+.stepsSectionBoxStepWrap {
+  gap: 12px;
+}
+
+.stepsSectionBoxStepCount {
+  min-width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 1px dashed #b5b2bd;
+  background-color: #fdfcff;
+}
+
+.stepsSectionBoxStepCount.active {
+  background-color: #1278fe;
+  border: none;
+}
+
+.stepsSectionBoxStepCount.previous {
+  background-color: #b1f9ff;
+  border: none;
+}
+
+.stepsSectionBoxStepCountText {
+  color: #b5b2bd;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+
+.stepsSectionBoxStepCount.active .stepsSectionBoxStepCountText {
+  color: #fff;
+}
+
+.stepsSectionBoxStepCount.previous .stepsSectionBoxStepCountText {
+  color: #1278fe;
+}
+
+.stepsSectionBoxStepHeading {
+  color: #b5b2bd;
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+
+.stepsSectionBoxStepHeadWrap.active .stepsSectionBoxStepHeading {
+  color: #0e0423;
+  font-weight: 600;
+}
+
+.stepsSectionBoxStepsInnerImg {
+  display: none;
+  width: 100%;
+}
+
+.stepsSectionBoxStepsRight {
+  width: 60%;
+}
+
+.stepsSectionBoxStepsImg {
+  width: 100%;
+  opacity: 0;
+  animation: fadeUp 0.4s ease-in-out forwards;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .stepsSectionBoxStepsLeft {
+    width: 100%;
+  }
+
+  .stepsSectionBoxStepLine {
+    display: none;
+  }
+
+  .stepsSectionBoxStepWrap {
+    align-items: start !important;
+  }
+
+  .stepsSectionBoxStepCount,
+  .stepsSectionBoxStepCount.active {
+    background-color: #b1f9ff;
+    border: none;
+  }
+
+  .stepsSectionBoxStepCountText,
+  .stepsSectionBoxStepCount.active .stepsSectionBoxStepCountText {
+    color: #1278fe;
+  }
+
+  .stepsSectionBoxStepHeading {
+    color: #0e0423;
+    font-weight: 600;
+  }
+
+  .stepsSectionBoxStepsInnerImg {
+    display: block;
+    margin: 1rem 0px 0px !important;
+  }
+
+  .stepsSectionBoxStepsRight {
+    display: none !important;
+  }
+}
