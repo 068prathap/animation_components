@@ -1,0 +1,104 @@
+.profitSectionScrollOuterWrap {
+  position: relative;
+  max-width: 1440px;
+  width: 100%;
+}
+
+.profitSectionScrollArrow {
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  border-radius: 40px;
+  border: 1.25px solid #d0dff3;
+  background: #fff;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.profitSectionScrollArrow.inactive {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.profitSectionScrollLeftArrow {
+  left: calc(8.6% - 2.5rem);
+}
+
+.profitSectionScrollRigthArrow {
+  right: calc(8.6% - 2.5rem);
+  transform: rotate(180deg);
+}
+
+.profitSectionScrollWrap {
+  max-width: 1440px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.profitSectionScrollWrap::before,
+.profitSectionScrollWrap::after {
+  position: absolute;
+  content: "";
+  width: 8.6%;
+  height: 100%;
+  top: 0;
+}
+
+.profitSectionScrollWrap::before {
+  left: 0;
+  background: linear-gradient(90deg, #fdfcff 70%, rgba(253, 252, 255, 0) 100%);
+  z-index: 1;
+}
+
+.profitSectionScrollWrap::after {
+  right: 0;
+  background: linear-gradient(90deg, rgba(253, 252, 255, 0) 0%, #fdfcff 30%);
+}
+
+.profitSectionScroll {
+  gap: 1.688rem;
+  min-width: 252.2%;
+  transition: all 0.4s ease;
+  transform: translateX(3.6%);
+}
+
+.profitSectionCard {
+  border-radius: 12px;
+  border: 1px solid #b2faff;
+  background: #e1fdff;
+  padding: 1.5rem;
+  width: 10.33%;
+}
+
+.profitSectionCardHeading {
+  color: #302a3e;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+
+.profitSectionCardImg {
+  width: 100%;
+}
+
+@media only screen and (max-width: 1215px) {
+  .profitSectionCardHeading br {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .profitSectionScroll {
+    min-width: 350%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .profitSectionScroll {
+    min-width: 570%;
+  }
+}
