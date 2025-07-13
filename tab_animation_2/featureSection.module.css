@@ -1,0 +1,143 @@
+.featureSection {
+  max-width: 1194px;
+  width: 100%;
+}
+
+.featureSectionTabList {
+  gap: 10px;
+  margin-bottom: 1.25rem;
+}
+
+.featureSectionTabWrap {
+  border-radius: 8px;
+  border: 1px solid #afc0d7;
+  background: #fdfcff;
+  padding: 0.75rem 0.75rem;
+  cursor: pointer;
+  transition: all 0.4s;
+  width: 20%;
+}
+
+.featureSectionTabWrap.active {
+  border: none;
+  background: #b1f9ff;
+  border-bottom: 2px solid #1278fe;
+}
+
+.featureSectionTab {
+  color: #728db3;
+  font-weight: 500;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+.featureSectionBoxWrap {
+  border-radius: 12px;
+  border: 1px solid #d0dff3;
+}
+
+.featureSectionBox {
+  gap: 1.875rem;
+  padding: 3.5rem 2.75rem;
+}
+
+.featureSectionBoxLeft,
+.featureSectionBoxRight {
+  width: 50%;
+}
+
+.featureSectionBoxLeft {
+  padding: 1.5rem 0px 0px 1.25rem;
+}
+
+.featureSectionBoxIcon {
+  width: 2.5rem;
+  margin-bottom: 1.5rem;
+  transform: translateY(10px);
+  opacity: 0;
+  animation: showUp 0.4s ease-in-out forwards;
+}
+
+@keyframes showUp {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.featureSectionBoxHeading {
+  color: #0e0423;
+  font-size: 1.875rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  transform: translateY(10px);
+  opacity: 0;
+  animation: showUp 0.4s ease-in-out 0.1s forwards;
+}
+
+.featureSectionBoxDesc {
+  color: #2d2c76;
+  line-height: 1.375rem;
+  letter-spacing: 0.48px;
+  margin-bottom: 0px;
+  transform: translateY(10px);
+  opacity: 0;
+  animation: showUp 0.4s ease-in-out 0.15s forwards;
+}
+
+.featureSectionBoxImg {
+  width: 100%;
+  transform: translateY(10px);
+  opacity: 0;
+  animation: showUp 0.4s ease-in-out forwards;
+}
+
+@media only screen and (max-width: 1135px) {
+  .featureSectionBoxDesc br {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 885px) {
+  .featureSectionBoxHeading br {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .featureSectionTabList {
+    display: none !important;
+  }
+
+  .featureSectionBoxWrap {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .featureSectionBox {
+    flex-direction: column;
+    padding: 0px;
+  }
+
+  .featureSectionBox > div {
+    width: 100%;
+  }
+
+  .featureSectionBoxLeft {
+    padding: 0px;
+  }
+
+  .featureSectionBoxIcon{
+    display: none;
+  }
+
+  .featureSectionBoxImg {
+    margin: 0px;
+  }
+}
