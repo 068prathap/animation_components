@@ -1,0 +1,133 @@
+.workingTabList {
+  gap: 1.875rem;
+  margin-bottom: 4rem;
+}
+
+.workingTabOuterWrap {
+  position: relative;
+  z-index: 0;
+}
+
+.workingTabOuterWrap.active::before {
+  position: absolute;
+  content: "";
+  left: -1px;
+  right: -1px;
+  top: -1px;
+  bottom: -1px;
+  background: linear-gradient(#e7dfff 0%, #ffffff00 50%, #5283ff 100%);
+  border-radius: 34px;
+  z-index: -1;
+}
+
+.workingTabWrap {
+  cursor: pointer;
+  width: 10.938rem;
+  background-color: #f9f9fe;
+  border-radius: 34px;
+  padding: 0.625rem;
+  gap: 4px;
+}
+
+.workingTabOuterWrap.active .workingTabWrap {
+  background: linear-gradient(180deg, #fff 51.11%, #ecf1ff 100%);
+  box-shadow: 0px 6px 12px 0px #d4daf9;
+}
+
+.workingTabIcon {
+  min-width: 1.5rem;
+}
+
+.woringTabIcon1 {
+  min-width: 18px;
+}
+
+.workingTab {
+  color: #686795;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+  margin-bottom: 0px;
+}
+
+.workingTabOuterWrap.active .workingTab {
+  color: #09001d;
+}
+
+.workingTabContentWrap {
+  max-width: 1200px;
+  width: 100%;
+  gap: 4rem;
+}
+
+.workingTabContent {
+  gap: 1.875rem;
+}
+
+.workingTabContentLeft {
+  width: 50%;
+  margin-top: 2rem;
+}
+
+.workingTabContentHeading {
+  color: #09001d;
+  font-size: 2.063rem;
+  font-weight: 700;
+  line-height: 2.75rem;
+  margin-bottom: 0.75rem;
+  transform: translateY(10px);
+  opacity: 0;
+  animation: showUp 0.4s ease-in-out 0.1s forwards;
+}
+
+@keyframes showUp {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.workingTabContentDesc {
+  color: #2d2c76;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  margin-bottom: 0px;
+  transform: translateY(10px);
+  opacity: 0;
+  animation: showUp 0.4s ease-in-out 0.15s forwards;
+}
+
+.workingTabContentRight {
+  width: 50%;
+}
+
+.workingTabContentImg {
+  width: 100%;
+  transform: translateY(10px);
+  opacity: 0;
+  animation: showUp 0.4s ease-in-out forwards;
+}
+
+@media only screen and (max-width: 768px) {
+  .workingTabList {
+    display: none !important;
+  }
+
+  .workingTabContent {
+    flex-direction: column;
+  }
+
+  .workingTabContent > div {
+    width: 100%;
+  }
+
+  .workingTabContentLeft {
+    margin-top: 0px;
+  }
+}
