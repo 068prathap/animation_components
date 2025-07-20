@@ -1,0 +1,42 @@
+.animatedTextWrap {
+  overflow: hidden;
+  display: inline-flex;
+  position: relative;
+}
+
+.animatedText {
+  position: absolute;
+  animation: moveUp2 0.5s ease forwards;
+  width: max-content;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+@keyframes moveUp2 {
+  0% {
+    opacity: .5;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+.animatedText.active {
+  position: relative;
+  transform: translateY(100%);
+  opacity: 1;
+  animation: moveUp 0.5s ease forwards;
+  width: auto;
+}
+
+@keyframes moveUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
