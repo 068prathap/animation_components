@@ -1,0 +1,81 @@
+.phCatPopup {
+  position: fixed;
+  left: 2.938rem;
+  bottom: 0;
+  transition: all 0.3s ease;
+  transform: translateY(81%);
+  gap: 1.25rem;
+  z-index: 2;
+}
+
+.phCatPopup:hover {
+  transform: translateY(0%);
+}
+
+.catImg {
+  width: 8.813rem;
+}
+
+.phCatPopupBox {
+  padding: 1rem 1rem 2.25rem;
+  background-image: url("/images/phCatPopup/phCatPopupBox.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  transform: scale(0);
+  transform-origin: left bottom;
+  transition: all 0.3s ease;
+}
+
+.phCatPopup:hover .phCatPopupBox {
+  transform: scale(1);
+}
+
+.phCatPopupBoxDesc {
+  color: #fff;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 800;
+  line-height: 1.25rem;
+  margin-bottom: 9px;
+  max-width: 140px;
+}
+
+.phCatPopupBoxBtnWrap{
+  text-decoration: none;
+}
+
+.phCatPopupBoxBtn {
+  width: 100%;
+  padding: 7px 0.75rem;
+  border-radius: 8px;
+  background: #fefefe;
+  border: none;
+  gap: 9px;
+  transition: all 0.2s ease;
+}
+
+.phCatPopupBoxBtn:hover {
+  transform: scale(1.05);
+}
+
+.phCatPopupBoxBtnIcon {
+  min-width: 0.875rem;
+}
+
+.phCatPopupBoxBtnText {
+  color: #fa573a;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 800;
+  line-height: 1.25rem;
+  letter-spacing: 0.36px;
+  margin-bottom: 0px;
+}
+
+@media only screen and (max-width: 580px) {
+  .phCatPopup {
+    display: none !important;
+  }
+}
